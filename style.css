@@ -11,7 +11,7 @@ body{
 .container{
     font-family: 'Poppins', sans-serif;
     margin: auto;
-    width: 66%;
+    width: 75%;
     text-align: center;
 }
 
@@ -48,18 +48,8 @@ body{
 
 .desc_drip{
     margin: auto;
-    width: 85%;
     font-size: 20px;
     margin-bottom: 40px;
-}
-
-th{
-    font-size: 24px;
-}
-
-td{
-    padding: 30px;
-    font-size: 20px;
 }
 
 .trustFactors{
@@ -76,6 +66,12 @@ td{
     gap: 30px;
 }
 
+.productReview{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .contacts{
     font-size: 20px;
 }
@@ -84,8 +80,24 @@ td{
     font-weight: bold;
 }
 
-.review {
+.boldText.review{
+    font-size: 32px;
+    width: 20%;
+}
+
+.boldText.rating{
+    display: block;
+    margin-top: 15px;
+    font-size: 24px;
+    text-align: right;
+}
+
+.review{
     font-size: 20px;
+}
+
+.reviewDesc {
+    width: 80%;
 }
 
 .userReviews{
@@ -132,15 +144,37 @@ td{
     text-decoration: none;
 }
 
-@media screen and (max-width: 1444px) {
-    .userReviews, .trustFactors, .productReviews {
+@media screen and (max-width: 1920px){
+    .trustFactors, .productReviews {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+    }
+}
 
+@media screen and (max-width: 1444px) {
+    .productReview{
+        display: block;
+    }
+    .reviewDesc{
+        width: 100%;
+    }
+    .userReviews{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .container{
+        width: 98%;
     }
 }
 
