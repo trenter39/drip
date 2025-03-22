@@ -1,23 +1,28 @@
 :root{
     --bg-color: black;
     --color: white;
+    --font-family: 'Poppins', sans-serif;
+    --main-font-size: 20px;
 }
 
 body{
     background-color: var(--bg-color);
     color: var(--color);
+    font-family: var(--font-family);
 }
 
 .container{
-    font-family: 'Poppins', sans-serif;
     margin: auto;
     width: 75%;
     text-align: center;
 }
 
 #navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     margin-top: 15px;
-    text-align: center;
     margin: auto;
     gap: 20px;
 }
@@ -26,7 +31,6 @@ body{
     color: var(--color);
     text-decoration: none;
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
     padding: 10px;
     cursor: pointer;
 }
@@ -34,33 +38,59 @@ body{
 .logo{
     color: var(--color);
     text-decoration: none;
-    margin-left: 10px;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
     font-size: 64px;
     cursor: pointer;
 }
 
+.burger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    font-size: 32px;
+    color: var(--color);
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown a{
+    color: var(--color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .headText{
     font-size: 48px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .desc_drip{
     margin: auto;
-    font-size: 20px;
+    font-size: var(--main-font-size);
     margin-bottom: 40px;
 }
 
 .trustFactors{
-    font-size: 20px;
+    font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 30px;
+    gap: 40px;
 }
 
 .productReviews{
-    font-size: 20px;
+    font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
@@ -73,7 +103,7 @@ body{
 }
 
 .contacts{
-    font-size: 20px;
+    font-size: var(--main-font-size);
 }
 
 .boldText{
@@ -93,10 +123,10 @@ body{
 }
 
 .review{
-    font-size: 20px;
+    font-size: var(--main-font-size);
 }
 
-.reviewDesc {
+.reviewDesc{
     width: 80%;
 }
 
@@ -112,26 +142,20 @@ body{
 }
 
 #revBtn{
-    color: white;
-    background-color: black;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    color: var(--color);
+    background-color: var(--bg-color);
+    font-size: var(--main-font-size);
     border: 2px solid;
     border-radius: 12px;
     margin-top: 30px;
-    width: 150px;
+    width: 175px;
     height: 50px;
     cursor: pointer;
 }
 
 #revBtn:hover{
-    color: black;
-    background-color: white;
-}
-
-.cusRev{
-    border: 2px solid;
-    border-radius: 12px;
+    color: var(--bg-color);
+    background-color: var(--color);
 }
 
 .endPage{
@@ -139,13 +163,8 @@ body{
     font-size: 16px;
 }
 
-.redirect{
-    color: white;
-    text-decoration: none;
-}
-
 @media screen and (max-width: 1920px){
-    .trustFactors, .productReviews {
+    .trustFactors, .productReviews{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -155,7 +174,7 @@ body{
     }
 }
 
-@media screen and (max-width: 1444px) {
+@media screen and (max-width: 1444px){
     .productReview{
         display: block;
     }
@@ -174,13 +193,33 @@ body{
 
 @media screen and (max-width: 1120px){
     .container{
-        width: 98%;
+        width: 96%;
     }
 }
 
-@media screen and (max-width: 540px) {
-    .navbar, .logo{
+@media screen and (max-width: 540px){
+    #navigation{
+        justify-content: center;
+    }
+    .navbar{
+        display: none;
+    }
+    .burger{
         display: block;
-        text-align: center;
+    }
+    .dropdown{
+        display: block;
+        position: absolute;
+        top: 75%;
+        background-color: #000;
+        padding: 10px;
+        border-radius: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    .dropdown.show{
+        opacity: 1;
+        pointer-events: auto;
     }
 }
