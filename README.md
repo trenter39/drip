@@ -4,4 +4,4 @@ dated December 2022 and was improved in 2025. the idea was to create a site with
 
 site uses icons from fontawesome to live itself a little bit. also added media queries to output the site correctly on device screens with different width.
 
-can be viewed in detail here: https://trxntxr.github.io/drip/
+can be viewed in detail here: https://trentered.github.io/drip/
