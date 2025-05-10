@@ -6,19 +6,24 @@
     <title>DRIP | Contacts</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0c81ebd625.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link id="favicon" rel="icon" type="image/x-icon" href="">
 </head>
 <body>
     <div id="navigation">
         <div class="burger" id="burger">
             <i class="fa-solid fa-person-falling-burst"></i>
         </div>
-        <a class="navbar" href="reviews.html">reviews</a>
-        <a class="logo" href="index.html">DRIP</a>
-        <a class="navbar" href="contacts.html" style="font-weight: bold;">contacts</a>
+        <div id="leftside-nav">
+            <a class="logo" href="index.html" style="font-weight: bold;">DRIP</a>
+            <a class="navbar" href="reviews.html">reviews</a>
+            <a class="navbar" href="contacts.html" style="text-decoration: underline;">contacts</a>
+        </div>
+        <div class="theme" id="theme">
+            <i class="fa-solid fa-droplet"></i>
+        </div>
         <div class="dropdown" id="dropdown">
             <a href="reviews.html">reviews</a>
-            <a href="contacts.html" style="font-weight: bold;">contacts</a>
+            <a href="contacts.html">contacts</a>
         </div>
     </div>
     <div class="container">
@@ -33,7 +38,9 @@
                 <p>support@dripmarket.ua<br><a href="mailto:enternalkey@gmail.com" style="color:white; text-decoration: none;">enternalkey@gmail.com</a></p>
             </div>
         </div>
-        <p class="endPage">All rights reserved. © Dripmarket<br>+38 (044)123-23-23 | info@dripmarket.ua | 2025</p>
+        <div>
+            <p class="endPage">All rights reserved. © Dripmarket<br>+38 (044)123-23-23 | info@dripmarket.ua | 2025</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
