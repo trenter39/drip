@@ -12,7 +12,7 @@
     font-style: normal;
 }
 
-:root{
+:root {
     --bg-color: white;
     --color: black;
     --font-family: 'Poppins', sans-serif;
@@ -20,8 +20,7 @@
     --container-width: 75%;
 }
 
-
-body{
+body {
     background-color: var(--bg-color);
     color: var(--color);
     font-family: var(--font-family);
@@ -29,21 +28,37 @@ body{
     margin: 0;
 }
 
-.container{
+.navbar,
+.logo,
+#blankPageLogo,
+.pageLink {
+    color: var(--color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.burger,
+.theme {
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    color: var(--color);
+}
+
+.container,
+#navigation {
     margin: auto;
     width: var(--container-width);
 }
 
-#navigation{
-    width: var(--container-width);
+#navigation {
     background-color: var(--bg-color);
     display: flex;
     position: sticky;
-    margin: auto;
     top: 0px;
 }
 
-#leftside-nav{
+#leftside-nav {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -51,48 +66,42 @@ body{
     text-align: left;
 }
 
-.navbar{
+#blankPageLogo {
     color: var(--color);
     text-decoration: none;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+.navbar {
     font-size: 32px;
-    cursor: pointer;
 }
 
-.logo{
-    color: var(--color);
-    text-decoration: none;
+.logo {
     font-size: 64px;
-    cursor: pointer;
 }
 
-.burger{
+.burger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-    position: absolute;
     left: 20px;
-    font-size: 32px;
-    color: var(--color);
 }
 
-.theme{
+.theme {
     display: block;
-    font-size: 32px;
-    cursor: pointer;
-    position: absolute;
     right: 20px;
-    color: var(--color);
 }
 
-#burger, #theme{
+#burger,
+#theme {
     margin-top: 25px;
 }
 
-.dropdown{
+.dropdown {
     display: none;
 }
 
-.dropdown a{
+.dropdown a {
     color: var(--color);
     text-decoration: none;
     padding: 5px 10px;
@@ -100,97 +109,96 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.headText{
+.headText {
     font-size: 44px;
 }
 
-.desc_drip{
+.desc_drip {
     margin: auto;
     font-size: var(--main-font-size);
     margin-bottom: 40px;
 }
 
-.trustFactors{
+.trustFactors {
     font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 40px;
 }
 
-.productReviews{
+.productReviews {
     font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
 }
 
-.productReview{
+.productReview {
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
 
-.contacts{
+.contacts {
     font-size: var(--main-font-size);
 }
 
-.boldText{
+.boldText {
     font-weight: 700;
 }
 
-.boldText.review{
+.boldText.review {
     font-size: 32px;
     width: 20%;
 }
 
-.boldText.rating{
+.boldText.rating {
     display: block;
     margin-top: 15px;
     font-size: 24px;
     text-align: right;
 }
 
-.review{
+.review {
     font-size: var(--main-font-size);
 }
 
-.reviewDesc{
+.reviewDesc {
     width: 80%;
 }
 
-.userReviews{
+.userReviews {
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
     text-align: center;
 }
 
-.userReview{
+.userReview {
     text-align: left;
     margin: auto;
     font-weight: bold;
 }
 
-.pageLink{
+.pageLink {
     text-align: right;
     display: block;
-    text-decoration: none;
-    color: var(--color);
     background-color: var(--bg-color);
     font-size: calc(var(--main-font-size) + 8px);
     margin-top: 20px;
-    cursor: pointer;
 }
 
-.endPage{
+.endPage {
     text-align: center;
     text-decoration: none;
     margin-top: 20px;
     font-size: 16px;
 }
 
-@media screen and (max-width: 1920px){
-    .trustFactors, .productReviews{
+@media screen and (max-width: 1920px) {
+
+    .trustFactors,
+    .productReviews {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -200,14 +208,16 @@ body{
     }
 }
 
-@media screen and (max-width: 1444px){
-    .productReview{
+@media screen and (max-width: 1444px) {
+    .productReview {
         display: block;
     }
-    .reviewDesc{
+
+    .reviewDesc {
         width: 100%;
     }
-    .userReviews{
+
+    .userReviews {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -218,27 +228,39 @@ body{
     }
 }
 
-@media screen and (max-width: 1120px){
-    :root{
+@media screen and (max-width: 1120px) {
+    :root {
         --container-width: 96%;
+    }
+
+    #blankPageText {
+        font-size: 14px;
+    }
+
+    #blankPageLogo {
+        font-size: 36px;
     }
 }
 
-@media screen and (max-width: 600px){
-    #navigation{
+@media screen and (max-width: 600px) {
+    #navigation {
         width: 100%;
         justify-content: center;
     }
-    .navbar{
+
+    .navbar {
         display: none;
     }
-    .burger{
+
+    .burger {
         display: block;
     }
-    .theme{
+
+    .theme {
         display: block;
     }
-    .dropdown{
+
+    .dropdown {
         display: block;
         position: absolute;
         text-align: center;
@@ -251,11 +273,22 @@ body{
         pointer-events: none;
         transition: opacity 0.3s ease;
     }
-    .dropdown.show{
+
+    .dropdown.show {
         opacity: 1;
         pointer-events: auto;
     }
-    .container, .userReviews{
+
+    .container,
+    .userReviews {
         text-align: left;
+    }
+
+    #blankPageText {
+        font-size: 10px;
+    }
+
+    #blankPageLogo {
+        font-size: 32px;
     }
 }
