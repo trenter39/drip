@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>DRIP</title>
-    <script src="start.js"></script>
+    <script src="scripts/start.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0c81ebd625.js" crossorigin="anonymous"></script>
     <link id="favicon" rel="icon" type="image/x-icon" href="">
@@ -19,19 +19,19 @@
         </div>
         <div id="leftside-nav">
             <a class="logo" href="index.html" style="font-weight: bold;">DRIP</a>
-            <a class="navbar" href="reviews.html">reviews</a>
-            <a class="navbar" href="contacts.html">contacts</a>
+            <a class="navbar-item" href="reviews.html">Reviews</a>
+            <a class="navbar-item" href="contacts.html">Contacts</a>
         </div>
         <div class="theme" id="theme">
             <i class="fa-solid fa-droplet"></i>
         </div>
         <div class="dropdown" id="dropdown">
-            <a href="reviews.html">reviews</a>
-            <a href="contacts.html">contacts</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contacts.html">Contacts</a>
         </div>
     </div>
     <div class="container">
-        <h1 class="headText">About us</h1>
+        <h1 class="heading">About us</h1>
         <p class="desc_drip"><b>Drip market</b> - review site that <b>talks about other sites</b>. Have you ever had any
             questions about <u>where to buy</u>, and at the same time <u>how you can save up your money</u>? A lot of
             sites have been checked on trust factor and it is important for us to tell you which you should trust and
@@ -59,10 +59,10 @@
                     interactions, ensuring you get honest and reliable insights before making a purchase.</p>
             </div>
         </div>
-        <h1 class="headText">Reviews about us</h1>
+        <h1 class="heading">Reviews about us</h1>
         <div class="userReviews">
-            <div class="review">
-                <div class="userReview">
+            <div class="userReview">
+                <div class="userReviewHeading">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -72,34 +72,37 @@
                 </div>
                 <p>"I always check Drip Market before purchasing from a new site. Their trust ratings have been spot-on
                     so far, and I like that they include personal experiences. Highly recommended!"</p>
-                <p>– <i>Sarah L.</i></p>
+                <p class="user">– <i>Sarah L.</i></p>
             </div>
-            <div class="review">
-                <div class="userReview">
+            <div class="userReview">
+                <div class="userReviewHeading">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                     <span>| Helpful, but Needs More Sites</span>
                 </div>
                 <p>"I appreciate the effort Drip Market puts into checking online stores, and their reviews are
                     detailed. But, I wish they covered more websites, especially smaller ones. Still, a great resource!"
                 </p>
-                <p>– <i>Mark T.</i></p>
+                <p class="user">– <i>Mark T.</i></p>
             </div>
-            <div class="review">
-                <div class="userReview">
+            <div class="userReview">
+                <div class="userReviewHeading">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                     <span>| Decent Reviews, but Could Be More In-Depth</span>
                 </div>
                 <p>"The site does a good job of highlighting scam risks, but some reviews feel a bit short. I’d love to
                     see more details about shipping times and customer service interactions."</p>
-                <p>– <i>Daniel R.</i></p>
+                <p class="user">– <i>Daniel R.</i></p>
             </div>
-            <div class="review">
-                <div class="userReview">
+            <div class="userReview">
+                <div class="userReviewHeading">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -109,16 +112,16 @@
                 </div>
                 <p>"I was about to buy from a site that seemed legit, but thanks to Drip Market, I saw that it had a low
                     trust score. I found a better alternative through their recommendations. Great job!"</p>
-                <p>– <i>Emma W.</i></p>
+                <p class="user">– <i>Emma W.</i></p>
             </div>
         </div>
-        <a class="pageLink" href="reviews.html"><b>Our Reviews</b> <i
+        <a class="cta-button" href="reviews.html"><b>Our Reviews</b> <i
                 class="fa-solid fa-person-walking-arrow-right"></i></a>
         <div>
-            <p class="endPage">All rights reserved. © Dripmarket<br>+38 (044)123-23-23 | info@dripmarket.ua | 2025</p>
+            <p class="footer">All rights reserved. © Dripmarket<br>+38 (044)123-23-23 | info@dripmarket.ua | 2025</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

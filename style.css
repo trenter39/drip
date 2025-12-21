@@ -16,8 +16,9 @@
     --bg-color: white;
     --color: black;
     --font-family: 'Poppins', sans-serif;
-    --main-font-size: 20px;
+    --main-font-size: 16px;
     --container-width: 75%;
+    --border-style: 1px solid #EDEDED;
 }
 
 body {
@@ -28,10 +29,10 @@ body {
     margin: 0;
 }
 
-.navbar,
 .logo,
-#blankPageLogo,
-.pageLink {
+.navbar-item,
+.cta-button,
+.dropdown a {
     color: var(--color);
     text-decoration: none;
     cursor: pointer;
@@ -39,10 +40,11 @@ body {
 
 .burger,
 .theme {
-    font-size: 32px;
+    font-size: 24px;
     cursor: pointer;
     position: absolute;
     color: var(--color);
+    margin-top: 15px;
 }
 
 .container,
@@ -51,7 +53,23 @@ body {
     width: var(--container-width);
 }
 
+.desc_drip,
+.trustFactors,
+.productReviews,
+.contacts,
+.userReview {
+    font-size: var(--main-font-size);
+}
+
+.trustFactor,
+.productReview,
+.userReview {
+    border: var(--border-style);
+    padding: 20px;
+}
+
 #navigation {
+    z-index: 10;
     background-color: var(--bg-color);
     display: flex;
     position: sticky;
@@ -62,39 +80,28 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     text-align: left;
+    margin-top: 10px;
 }
 
-#blankPageLogo {
-    color: var(--color);
-    text-decoration: none;
-    font-size: 44px;
-    cursor: pointer;
-}
-
-.navbar {
-    font-size: 32px;
+.navbar-item {
+    font-size: 24px;
 }
 
 .logo {
-    font-size: 64px;
+    font-size: 32px;
 }
 
 .burger {
     display: none;
     flex-direction: column;
-    left: 20px;
+    left: 15px;
 }
 
 .theme {
     display: block;
-    right: 20px;
-}
-
-#burger,
-#theme {
-    margin-top: 25px;
+    right: 0px;
 }
 
 .dropdown {
@@ -102,35 +109,35 @@ body {
 }
 
 .dropdown a {
-    color: var(--color);
-    text-decoration: none;
-    padding: 5px 10px;
-    font-size: 32px;
+    padding: 5px 20px;
+    font-size: 24px;
     transition: background-color 0.3s ease;
 }
 
-.headText {
-    font-size: 44px;
+.heading {
+    font-size: 24px;
 }
 
 .desc_drip {
     margin: auto;
-    font-size: var(--main-font-size);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .trustFactors {
-    font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 40px;
+    gap: 20px;
+}
+
+.trustFactor p,
+.user {
+    margin: 10px 0 0 0;
 }
 
 .productReviews {
-    font-size: var(--main-font-size);
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
+    gap: 20px;
 }
 
 .productReview {
@@ -139,64 +146,62 @@ body {
     gap: 20px;
 }
 
-.contacts {
-    font-size: var(--main-font-size);
-}
-
 .boldText {
     font-weight: 700;
 }
 
 .boldText.review {
-    font-size: 32px;
+    font-size: 24px;
     width: 20%;
 }
 
 .boldText.rating {
     display: block;
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: right;
-}
-
-.review {
-    font-size: var(--main-font-size);
 }
 
 .reviewDesc {
     width: 80%;
+    margin: 0;
 }
 
 .userReviews {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 30px;
-    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    text-align: left;
 }
 
-.userReview {
+.userReviewHeading {
     text-align: left;
     margin: auto;
     font-weight: bold;
 }
 
-.pageLink {
+.cta-button {
     text-align: right;
     display: block;
     background-color: var(--bg-color);
-    font-size: calc(var(--main-font-size) + 8px);
+    font-size: calc(var(--main-font-size) + 4px);
     margin-top: 20px;
 }
 
-.endPage {
+.footer {
     text-align: center;
     text-decoration: none;
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 3200px) {
+    .userReviews {
+        grid-template-columns: auto auto;
+    }
 }
 
 @media screen and (max-width: 1920px) {
-
     .trustFactors,
     .productReviews {
         width: 100%;
@@ -205,16 +210,18 @@ body {
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        gap: 20px;
     }
 }
 
-@media screen and (max-width: 1444px) {
+@media screen and (max-width: 1430px) {
     .productReview {
         display: block;
     }
 
     .reviewDesc {
         width: 100%;
+        margin: 10px 0 0 0;
     }
 
     .userReviews {
@@ -223,22 +230,13 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
         text-align: left;
     }
 }
 
 @media screen and (max-width: 1120px) {
     :root {
-        --container-width: 96%;
-    }
-
-    #blankPageText {
-        font-size: 14px;
-    }
-
-    #blankPageLogo {
-        font-size: 36px;
+        --container-width: 94%;
     }
 }
 
@@ -248,7 +246,7 @@ body {
         justify-content: center;
     }
 
-    .navbar {
+    .navbar-item {
         display: none;
     }
 
@@ -258,23 +256,25 @@ body {
 
     .theme {
         display: block;
+        right: 15px;
     }
 
     .dropdown {
         display: block;
         position: absolute;
         text-align: center;
-        top: 85%;
         width: 100%;
         background-color: var(--bg-color);
-        z-index: 2;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
+        transform: translateY(45px);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease;
+        z-index: 5;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .dropdown.show {
+        transform: translateY(50px);
         opacity: 1;
         pointer-events: auto;
     }
@@ -282,13 +282,5 @@ body {
     .container,
     .userReviews {
         text-align: left;
-    }
-
-    #blankPageText {
-        font-size: 10px;
-    }
-
-    #blankPageLogo {
-        font-size: 32px;
     }
 }
