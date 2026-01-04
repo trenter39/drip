@@ -28,10 +28,12 @@ function changeTheme() {
     if (darkTheme) {
         document.documentElement.style.setProperty('--color', 'black');
         document.documentElement.style.setProperty('--bg-color', 'white');
+        document.documentElement.style.setProperty('--border-color', '#D3D9DF');
         setFavicon('icons/logo.ico');
     } else {
         document.documentElement.style.setProperty('--color', 'white');
         document.documentElement.style.setProperty('--bg-color', 'black');
+        document.documentElement.style.setProperty('--border-color', '#3F444C');
         setFavicon('icons/logoB.ico');
     }
     darkTheme = !darkTheme;
