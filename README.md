@@ -6,4 +6,4 @@ site uses icons from fontawesome to live itself a little bit. also site contains
 
 DRIP can be viewed in detail here: https://trenter39.github.io/drip/
 
-![DRIP preview](https://github.com/trenter39/drip/blob/master/preview.png)
+![DRIP preview](./preview.png)
